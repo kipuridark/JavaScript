@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <title>Web kiểm tra số nguyên tố</title>
+        <script>
+            
+        function loiChao(){
+
+            var t = document.getElementById("bien").value;
+            var result = true;
+            if(t<2){
+                result= false;
+            }
+            for(let i=2; i<=Math.sqrt(t); i++)
+            {
+                if(t%i==0){
+                    result=false;
+                }
+            }
+            if(result){
+                var text='So nhap vao la so nguyen to';
+            } else{
+                text='So nhap vao khong phai la <strong>so nguyen to</strong>';
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+
+
+        </script>
+
+        <style>
+            #btn_click{
+                background-color: red;
+                color: white;
+                width: 100px;
+                height: 40px;
+                font-size: large;
+                border-radius: 5%;
+                border: none;
+                transition: background-color 0.2s, color 0.2s;
+            }
+            #btn_click:hover{
+                background-color: white;
+                color: red;
+                border: red solid 1px;
+                cursor: pointer;
+                box-shadow: 5px 5px 10px gray;
+            }
+            #btn_click:active{
+                background-color: rgb(119, 5, 5);
+            }
+        </style>
+    </head>
+    <body>
+         <p id="demo">Hello</p>
+         <input type="number" id="bien">
+         <button id="btn_click" onclick="loiChao()">Click me!</button><br>
+         <a href="https://www.youtube.com" target="_blank">Link to Youtube</a>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dolores, enim animi cumque esse rerum temporibus nemo ullam a, quod explicabo sapiente non laboriosam nisi aut. Adipisci, voluptatem perspiciatis? Adipisci minus error voluptatibus aut. Error, veritatis, quo aut at aperiam ad et expedita voluptas sapiente, iste rerum. Inventore, fugiat nemo.</p>
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus perferendis iusto quo at ut! Aliquam sit ipsam quod officiis dignissimos odio, asperiores recusandae animi sed ex perferendis non accusantium odit ratione impedit quidem aperiam reprehenderit suscipit minima, nemo rerum. Ducimus voluptate, pariatur tempora at atque necessitatibus! Minima eos sequi accusamus pariatur earum dolor laboriosam nam mollitia ad enim facilis iure dicta quae vero, repudiandae dolorum eaque odio corrupti, fugit obcaecati reprehenderit! Minus natus voluptate corrupti at dolore aliquam ex nihil maiores nesciunt vero perferendis, reprehenderit quam, architecto laboriosam quibusdam. Quis officia vitae dicta quod nulla fugit aliquam excepturi eligendi maiores?</p>
+    </body>
+</html>
